@@ -299,17 +299,25 @@ body {
     border-top: 1px solid #eee;
 }
 
-/* Page Title Section Styles */
 .page-title-section {
     position: relative;
-    background-size: cover;
-    background-position: center;
-    height: 250px;
-    margin-top: 70px;
+    overflow: hidden;
+    height: 300px;
     display: flex;
     align-items: center;
     justify-content: center;
+    color: white;
     text-align: center;
+}
+
+.page-title-bg-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: 0;
 }
 
 .page-title-overlay {
@@ -318,41 +326,25 @@ body {
     left: 0;
     width: 100%;
     height: 100%;
-    background: rgba(0, 0, 0, 0.7);
+    background-color: rgba(0, 0, 0, 0.5); /* Adjust for darker/lighter overlay */
+    z-index: 1;
 }
 
 .page-title-container {
     position: relative;
     z-index: 2;
-    padding: 0 20px;
-}
-
-.page-title-container h1 {
-    color: #ffffff;
-    font-size: 2.5rem;
-    margin-bottom: 1rem;
-    font-weight: 700;
-}
-
-.breadcrumb {
-    color: #ffffff;
-    font-size: 1rem;
 }
 
 .breadcrumb a {
-    color: #FF6B00;
-    text-decoration: none;
-    transition: color 0.3s ease;
+    color: #fff;
+    text-decoration: underline;
 }
 
-.breadcrumb a:hover {
-    color: #FF8533;
+.separator {
+    margin: 0 5px;
+    color: #ccc;
 }
 
-.breadcrumb .separator {
-    margin: 0 10px;
-    color: #ffffff;
-}
 
 /* Responsive Design */
 @media (max-width: 768px) {
