@@ -299,7 +299,41 @@ body {
     border-top: 1px solid #eee;
 }
 
+/* Page Title Section Styles */
+.page-title-section {
+    position: relative;
+    background-image: url('/assets/images/hhh.jpg');
+    background-size: cover;
+    background-position: center;
+    height: 250px;
+    margin-top: 70px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
 
+.page-title-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.7);
+}
+
+.page-title-container {
+    position: relative;
+    z-index: 2;
+    padding: 0 20px;
+}
+
+.page-title-container h1 {
+    color: #ffffff;
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    font-weight: 700;
+}
 
 .breadcrumb {
     color: #ffffff;
