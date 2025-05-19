@@ -1,0 +1,453 @@
+/* Global Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body styles for sticky footer setup */
+body {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Header Styles */
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 5%;
+    background-color: white;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1000; /* Ensures header stays above other content */
+}
+
+/* Logo Styles */
+.logo {
+    height: 50px;
+}
+
+/* Navigation Menu Styles */
+.nav-menu {
+    display: flex;
+    gap: 2rem;
+    list-style: none;
+}
+
+/* Navigation Links */
+.nav-menu a {
+    text-decoration: none;
+    color: #FF6B00;
+    font-weight: 500;
+    font-size: 1.1rem;
+    transition: color 0.3s ease;
+}
+
+/* Navigation Hover Effect */
+.nav-menu a:hover {
+    color: #FF8533;
+}
+
+/* Hero Section Styles */
+.hero {
+    height: 50vh;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 70px; /* Height of header */
+}
+
+.hero-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.719);
+}
+
+/* Hero Content Container */
+.hero-content {
+    position: relative;
+    z-index: 1;
+    text-align: left;
+    color: white;
+    padding: 2rem;
+}
+
+/* Hero Heading */
+.hero-content h1 {
+    font-size: 4rem;
+    margin-bottom: 1rem;
+}
+
+/* Hero Paragraph */
+.hero-content p {
+    font-size: 1.2rem;
+}
+
+
+
+/* About Section Styles */
+.about-section {
+    padding: 6rem 5%;
+    background-color: #f9f9f9;
+}
+
+.about-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    gap: 4rem;
+}
+
+.about-text {
+    flex: 1;
+    opacity: 0;
+}
+
+.about-text h2 {
+    font-size: 2.5rem;
+    color: #333;
+    margin-bottom: 1.5rem;
+}
+
+.about-text p {
+    font-size: 1.1rem;
+    color: #666;
+    line-height: 1.6;
+    margin-bottom: 2rem;
+}
+
+.learn-more {
+    padding: 0.8rem 2rem;
+    background-color: #FF6B00;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 1.1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.learn-more:hover {
+    background-color: #FF8533;
+}
+
+.about-image {
+    flex: 1;
+    opacity: 0;
+}
+
+.about-image img {
+    width: 100%;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+/* Solutions Section Styles */
+.solutions-section {
+    padding: 6rem 5%;
+    background-color: #f9f9f9;
+}
+
+.solutions-content {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.solutions-header {
+    text-align: center;
+    margin-bottom: 4rem;
+}
+
+.solutions-header h2 {
+    font-size: 2.5rem;
+    color: #333;
+    margin-bottom: 1rem;
+}
+
+.solutions-header p {
+    font-size: 1.1rem;
+    color: #666;
+    max-width: 800px;
+    margin: 0 auto;
+    line-height: 1.6;
+}
+
+.services-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+}
+
+.service-card {
+    background: white;
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    transition: transform 0.3s ease;
+}
+
+.service-card:hover {
+    transform: translateY(-10px);
+}
+
+.service-card i {
+    font-size: 2.5rem;
+    color: #FF6B00;
+    margin-bottom: 1rem;
+}
+
+.service-card h3 {
+    font-size: 1.5rem;
+    color: #333;
+    margin-bottom: 1rem;
+}
+
+.service-card p {
+    color: #666;
+    line-height: 1.6;
+}
+
+/* Footer Styles */
+.footer {
+    background-color: white;
+    padding: 3rem 5%;
+    box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.1);
+    margin-top: auto; /* Pushes footer to bottom */
+}
+
+/* Footer Content Layout */
+.footer-content {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+    width: 100%;
+}
+
+/* Footer Logo Container */
+.footer-logo {
+    align-self: flex-start;
+}
+
+/* Footer Logo Image */
+.footer-logo-img {
+    height: 60px;
+}
+
+/* Footer Links List */
+.footer-links ul {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    list-style: none;
+    padding: 0;
+}
+
+/* Footer Link Styles */
+.footer-links a {
+    text-decoration: none;
+    color: #FF6B00;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+/* Footer Link Hover Effect */
+.footer-links a:hover {
+    color: #FF8533;
+}
+
+/* Copyright and Credits Text */
+.copyright, .credits {
+    margin: 0;
+    color: #666;
+    font-size: 0.9rem;
+}
+
+/* Credits Link Styles */
+.credits a {
+    color: #FF6B00;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.credits a:hover {
+    color: #FF8533;
+}
+
+/* Footer Bottom Section */
+.footer-bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 2rem;
+    border-top: 1px solid #eee;
+}
+
+
+
+.breadcrumb {
+    color: #ffffff;
+    font-size: 1rem;
+}
+
+.breadcrumb a {
+    color: #FF6B00;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.breadcrumb a:hover {
+    color: #FF8533;
+}
+
+.breadcrumb .separator {
+    margin: 0 10px;
+    color: #ffffff;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .about-content {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .container {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .services-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* Mobile Responsive Styles */
+@media screen and (max-width: 768px) {
+    /* Header */
+    .header {
+        padding: 0.5rem 2%;
+    }
+
+    .logo {
+        height: 40px;
+    }
+
+    .nav-menu {
+        display: none; /* Will be shown via hamburger menu */
+    }
+
+    /* Hero Section */
+    .hero-content h1 {
+        font-size: 2.5rem;
+    }
+
+    .hero-content p {
+        font-size: 1rem;
+        padding: 0 1rem;
+    }
+
+    /* About Section */
+    .about-content {
+        flex-direction: column;
+        padding: 2rem;
+        gap: 2rem;
+    }
+
+    .about-image {
+        order: -1; /* Shows image before text on mobile */
+    }
+
+    /* Solutions Section */
+    .solutions-section {
+        padding: 3rem 2%;
+    }
+
+    .solutions-header h2 {
+        font-size: 2rem;
+    }
+
+    .services-grid {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+
+    /* Footer */
+    .footer-content {
+        grid-template-columns: 1fr;
+        text-align: center;
+        gap: 1.5rem;
+    }
+
+    .footer-logo {
+        margin: 0 auto;
+    }
+
+    .footer-links ul {
+        flex-direction: column;
+        gap: 1rem;
+    }
+
+    .footer-bottom {
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+
+    /* Page Title Section */
+    .page-title {
+        height: 150px;
+    }
+
+    .page-title h1 {
+        font-size: 2rem;
+    }
+}
+
+/* Hamburger Menu Styles */
+.hamburger {
+    display: none;
+    cursor: pointer;
+}
+
+@media screen and (max-width: 768px) {
+    .hamburger {
+        display: block;
+    }
+
+    .nav-menu {
+        position: fixed;
+        left: -100%;
+        top: 70px;
+        gap: 0;
+        flex-direction: column;
+        background-color: white;
+        width: 100%;
+        text-align: center;
+        transition: 0.3s;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    }
+
+    .nav-menu.active {
+        left: 0;
+    }
+
+    .nav-menu li {
+        margin: 16px 0;
+    }
+}
