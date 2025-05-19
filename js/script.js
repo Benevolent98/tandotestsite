@@ -33,26 +33,29 @@ document.addEventListener('DOMContentLoaded', () => {
   aboutImage.style.transform = 'translateX(100px)';
   aboutImage.style.transition = 'all 1s ease-out';
 
-
-
   // Event listeners
   window.addEventListener('scroll', animate);
   window.addEventListener('load', animate);
 
   // Mobile Menu Toggle
-  const hamburger = document.querySelector('.hamburger');
+  const mobileMenuBtn = document.querySelector('.mobile-menu-btn');
   const navMenu = document.querySelector('.nav-menu');
 
-  hamburger.addEventListener('click', () => {
+  mobileMenuBtn.addEventListener('click', () => {
       navMenu.classList.toggle('active');
-      hamburger.classList.toggle('active');
+  });
+
+  // Close menu when clicking outside
+  document.addEventListener('click', (e) => {
+      if (!e.target.closest('.header')) {
+          navMenu.classList.remove('active');
+      }
   });
 
   // Close menu when clicking a link
   document.querySelectorAll('.nav-menu a').forEach(link => {
       link.addEventListener('click', () => {
           navMenu.classList.remove('active');
-          hamburger.classList.remove('active');
       });
   });
 });
