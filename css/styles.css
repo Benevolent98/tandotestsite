@@ -97,50 +97,6 @@ body {
 
 
 
-/*-------------------------*/
-/* pagetitle Section Styles */
-.pagetitle {
-    height: 50vh;
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    position: relative;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin-top: 70px; /* Height of header */
-}
-
-.pagetitle-overlay {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(0, 0, 0, 0.719);
-}
-
-/* pagetitle Content Container */
-.pagetitle-content {
-    position: relative;
-    z-index: 1;
-    text-align: left;
-    color: white;
-    padding: 2rem;
-}
-
-/* pagetitle Heading */
-.pagetitle-content h1 {
-    font-size: 4rem;
-    margin-bottom: 1rem;
-}
-
-/* pagetitle Paragraph */
-.pagetitle-content p {
-    font-size: 1.2rem;
-}
-/*-------------------------*/
-
 /* About Section Styles */
 .about-section {
     padding: 6rem 5%;
